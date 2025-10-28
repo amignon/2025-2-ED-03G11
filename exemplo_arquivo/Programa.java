@@ -5,9 +5,12 @@ import java.util.Scanner;
 
 public class Programa {
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Caminho do arquivo: ");
+        String caminho = entrada.nextLine();
         String[] linhas = null;
         try {
-            linhas = leArquivo("arquivo.ed1");
+            linhas = leArquivo(caminho);
             for (int i = 0; i < linhas.length; i++) {
                 if (linhas[i] == null) break;
                 System.out.println(linhas[i]);
